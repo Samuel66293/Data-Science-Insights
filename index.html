@@ -182,54 +182,56 @@
             <h1>Samuel Ceballos P.</h1>
             <p class="brand-name">Data Science Insights</p>
             <p class="tagline">Transforming Volatility into Strategic Resilience | Bridging Data Science with Real-World Optimization</p>
+    
         </div>
     </header>
 
     <!-- PROYECTOS VIP -->
-    <h2 class="projects-title">Featured Projects</h2>
-    <div class="cards-container">
+    
+<!-- SECCIÓN DE PROYECTOS (LIMPIA Y SIN DUPLICADOS) -->
+    <h2 class="projects-title" style="text-align: center; color: #2c5364; font-size: 2rem; margin-top: 40px;">Featured Projects</h2>
+    
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; padding: 20px; max-width: 1100px; margin: 0 auto;">
         
-        <!-- TARJETA 1: Riesgo Climático -->
-        <div class="card">
-            <div class="card-img">
-                <!-- Asegúrate de que este archivo esté en tu repositorio -->
-                <img src="riesgo_helada_papa.gif" alt="Climate Risk Animation">
+        <!-- TARJETA 1: CLIMA -->
+        <div style="background: white; border-radius: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); width: 300px; overflow: hidden; transition: transform 0.3s;">
+            <div style="height: 180px; background: #f0f0f0; display: flex; align-items: center; justify-content: center;">
+                <img src="riesgo_helada_papa.gif" alt="Climate Risk" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.style.display='none'; this.parentElement.innerHTML='<b style=\'color:#777\'>Climate Data Viz</b>'">
             </div>
-            <div class="card-content">
-                <h3>Climate Risk & Food Security</h3>
-                <p>Bayesian projection of frost events and their impact on agricultural supply chains. Transforming climate volatility into actionable protocols.</p>
-                <a href="https://github.com/Samuel66293/Data-Science-Insights" class="card-btn">View Analysis</a>
-            </div>
-        </div>
-
-        <!-- TARJETA 2: Optimización de Transporte -->
-        <div class="card">
-            <div class="card-img">
-                <!-- Cambia el nombre del archivo si tu imagen de transporte se llama diferente -->
-                <img src="optimizacion_transporte_lara.png" alt="Transport Optimization">
-            </div>
-            <div class="card-content">
-                <h3>Transport Optimization</h3>
-                <p>Data-driven strategies to optimize logistics and reduce operational costs in regional distribution networks.</p>
-                <a href="https://github.com/Samuel66293/Data-Science-Insights" class="card-btn">View Project</a>
+            <div style="padding: 20px;">
+                <h3 style="color: #2c5364; margin-top: 0;">Climate Risk & Food Security</h3>
+                <p style="color: #666; font-size: 0.9rem;">Bayesian projection of frost events. Transforming climate volatility into actionable protocols.</p>
+                <a href="#" style="display: block; text-align: center; background: #2c5364; color: white; padding: 10px; border-radius: 8px; text-decoration: none; font-weight: bold; margin-top: 15px;">View Analysis</a>
             </div>
         </div>
 
-        <!-- TARJETA 3: Encuestas y Matriz de Opinión -->
-        <div class="card">
-            <div class="card-img">
-                <!-- Puedes subir una captura de tu matriz y llamarla encuestas.png -->
-                <img src="Lamina2_Proyeccion_Riesgo.png" alt="Data Collection & Insights">
+        <!-- TARJETA 2: TRANSPORTE -->
+        <div style="background: white; border-radius: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); width: 300px; overflow: hidden; transition: transform 0.3s;">
+            <div style="height: 180px; background: #f0f0f0; display: flex; align-items: center; justify-content: center;">
+                <img src="optimizacion_transporte_lara.png" alt="Transport" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.style.display='none'; this.parentElement.innerHTML='<b style=\'color:#777\'>Logistics Model</b>'">
             </div>
-            <div class="card-content">
-                <h3>Voice of Reality: Survey Analysis</h3>
-                <p>Collecting and analyzing real-world data to map public opinion and uncover hidden patterns in local communities.</p>
-                <a href="https://github.com/Samuel66293/Data-Science-Insights" class="card-btn">View Insights</a>
+            <div style="padding: 20px;">
+                <h3 style="color: #2c5364; margin-top: 0;">Transport Optimization</h3>
+                <p style="color: #666; font-size: 0.9rem;">Data-driven strategies to optimize logistics and reduce operational costs in regional networks.</p>
+                <a href="#" style="display: block; text-align: center; background: #2c5364; color: white; padding: 10px; border-radius: 8px; text-decoration: none; font-weight: bold; margin-top: 15px;">View Project</a>
+            </div>
+        </div>
+
+        <!-- TARJETA 3: ENCUESTAS -->
+        <div style="background: white; border-radius: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); width: 300px; overflow: hidden; transition: transform 0.3s;">
+            <div style="height: 180px; background: #f0f0f0; display: flex; align-items: center; justify-content: center;">
+                <img src="Lamina2_Proyeccion_Riesgo.png" alt="Surveys" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.style.display='none'; this.parentElement.innerHTML='<b style=\'color:#777\'>Opinion Matrix</b>'">
+            </div>
+            <div style="padding: 20px;">
+                <h3 style="color: #2c5364; margin-top: 0;">Voice of Reality: Surveys</h3>
+                <p style="color: #666; font-size: 0.9rem;">Collecting real-world data to map public opinion and uncover hidden patterns in communities.</p>
+                <a href="#" style="display: block; text-align: center; background: #2c5364; color: white; padding: 10px; border-radius: 8px; text-decoration: none; font-weight: bold; margin-top: 15px;">View Insights</a>
             </div>
         </div>
 
     </div>
 
+    
 <!-- CONTADOR DE VISITAS FUNCIONAL -->
     <section class="visitor-counter">
         <div class="counter-title">🌍 Global Visitors Tracking Real-World Impact</div>
@@ -248,7 +250,7 @@
             <a href="https://www.linkedin.com/in/sara-rodriguez/" target="_blank">LinkedIn</a> | 
             <a href="https://github.com/Samuel66293" target="_blank">GitHub</a>
         </p>
-        <p>&copy; 2026 Data Science Insights | Samuel Ceballos P.</p>
+        <p>&copy; 2026 Data Science Insights | Samuel Ceballos P. All Rigts Reserved</p>
     </footer>
 
 <script>
