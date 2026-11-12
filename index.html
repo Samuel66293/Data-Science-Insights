@@ -188,44 +188,84 @@
 
     <!-- PROYECTOS VIP -->
     
-<!-- SECCIÓN DE PROYECTOS (LIMPIA Y SIN DUPLICADOS) -->
-    <h2 class="projects-title" style="text-align: center; color: #2c5364; font-size: 2rem; margin-top: 40px;">Featured Projects</h2>
-    
-    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; padding: 20px; max-width: 1100px; margin: 0 auto;">
+    <!-- FEATURED PROJECTS (ENGLISH) -->
+    <h2 class="projects-title">Featured Projects</h2>
+    <div class="cards-container">
         
-        <!-- TARJETA 1: CLIMA -->
-        <div style="background: white; border-radius: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); width: 300px; overflow: hidden; transition: transform 0.3s;">
-            <div style="height: 180px; background: #f0f0f0; display: flex; align-items: center; justify-content: center;">
-                <img src="riesgo_helada_papa.gif" alt="Climate Risk" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.style.display='none'; this.parentElement.innerHTML='<b style=\'color:#777\'>Climate Data Viz</b>'">
+        <div class="card">
+            <div class="card-img">
+                <img src="riesgo_helada_papa.gif" alt="Climate Risk" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'card-img-placeholder\'>🌡️ Climate Data Visualization</div>'">
             </div>
-            <div style="padding: 20px;">
-                <h3 style="color: #2c5364; margin-top: 0;">Climate Risk & Food Security</h3>
-                <p style="color: #666; font-size: 0.9rem;">Bayesian projection of frost events. Transforming climate volatility into actionable protocols.</p>
-                <a href="#" style="display: block; text-align: center; background: #2c5364; color: white; padding: 10px; border-radius: 8px; text-decoration: none; font-weight: bold; margin-top: 15px;">View Analysis</a>
-            </div>
-        </div>
-
-        <!-- TARJETA 2: TRANSPORTE -->
-        <div style="background: white; border-radius: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); width: 300px; overflow: hidden; transition: transform 0.3s;">
-            <div style="height: 180px; background: #f0f0f0; display: flex; align-items: center; justify-content: center;">
-                <img src="optimizacion_transporte_lara.png" alt="Transport" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.style.display='none'; this.parentElement.innerHTML='<b style=\'color:#777\'>Logistics Model</b>'">
-            </div>
-            <div style="padding: 20px;">
-                <h3 style="color: #2c5364; margin-top: 0;">Transport Optimization</h3>
-                <p style="color: #666; font-size: 0.9rem;">Data-driven strategies to optimize logistics and reduce operational costs in regional networks.</p>
-                <a href="#" style="display: block; text-align: center; background: #2c5364; color: white; padding: 10px; border-radius: 8px; text-decoration: none; font-weight: bold; margin-top: 15px;">View Project</a>
+            <div class="card-content">
+                <h3>Climate Risk & Food Security</h3>
+                <p>Bayesian projection of frost events and their impact on agricultural supply chains. Transforming climate volatility into actionable protocols.</p>
+                <a href="#" class="card-btn">View Analysis</a>
             </div>
         </div>
 
-        <!-- TARJETA 3: ENCUESTAS -->
-        <div style="background: white; border-radius: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); width: 300px; overflow: hidden; transition: transform 0.3s;">
-            <div style="height: 180px; background: #f0f0f0; display: flex; align-items: center; justify-content: center;">
-                <img src="Lamina2_Proyeccion_Riesgo.png" alt="Surveys" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.style.display='none'; this.parentElement.innerHTML='<b style=\'color:#777\'>Opinion Matrix</b>'">
+        <div class="card">
+            <div class="card-img">
+                <div class="card-img-placeholder">🚚 Logistics Optimization Model</div>
             </div>
-            <div style="padding: 20px;">
-                <h3 style="color: #2c5364; margin-top: 0;">Voice of Reality: Surveys</h3>
-                <p style="color: #666; font-size: 0.9rem;">Collecting real-world data to map public opinion and uncover hidden patterns in communities.</p>
-                <a href="#" style="display: block; text-align: center; background: #2c5364; color: white; padding: 10px; border-radius: 8px; text-decoration: none; font-weight: bold; margin-top: 15px;">View Insights</a>
+            <div class="card-content">
+                <h3>Transport Optimization</h3>
+                <p>Data-driven strategies to optimize logistics and reduce operational costs in regional distribution networks.</p>
+                <a href="#" class="card-btn">View Project</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img">
+                <div class="card-img-placeholder">📊 Public Opinion Matrix</div>
+            </div>
+            <div class="card-content">
+                <h3>Voice of Reality: Survey Analysis</h3>
+                <p>Collecting and analyzing real-world data to map public opinion and uncover hidden patterns in local communities.</p>
+                <a href="#" class="card-btn">View Insights</a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- FLECHA HACIA SECCIÓN EN ESPAÑOL -->
+    <div class="spanish-arrow">
+        <a href="#spanish-section">🇻🇪 Ver Contenido en Español ➡️</a>
+    </div>
+
+    <!-- SECCIÓN EN ESPAÑOL -->
+    <h2 class="projects-title" id="spanish-section">🇻🇪 Contenido en Español</h2>
+    <div class="cards-container">
+        
+        <div class="card">
+            <div class="card-img">
+                <img src="riesgo_helada_papa.gif" alt="Riesgo Climático" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'card-img-placeholder\'>🌡️ Visualización de Datos Climáticos</div>'">
+            </div>
+            <div class="card-content">
+                <h3>Riesgo Climático y Seguridad Alimentaria</h3>
+                <p>Proyección bayesiana de eventos de heladas y su impacto en las cadenas de suministro agrícola.</p>
+                <a href="#" class="card-btn">Ver Análisis</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img">
+                <div class="card-img-placeholder">📻 Análisis de Radiodifusión</div>
+            </div>
+            <div class="card-content">
+                <h3>Estudio de Radiodifusión</h3>
+                <p>Análisis estadístico de audiencias y patrones de consumo en medios de comunicación regionales.</p>
+                <a href="#" class="card-btn">Ver Estudio</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-img">
+                <div class="card-img-placeholder">📊 Matriz de Opinión</div>
+            </div>
+            <div class="card-content">
+                <h3>La Voz de la Realidad: Encuestas</h3>
+                <p>Recolección y análisis de datos del mundo real para mapear la opinión pública en comunidades locales.</p>
+                <a href="#" class="card-btn">Ver Perspectivas</a>
             </div>
         </div>
 
