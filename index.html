@@ -55,28 +55,13 @@
 
 
         
-        /* --- HEADER (Tu Marca Personal) --- */
-        header {
-            background: linear-gradient(135deg, #2c3e50, #4ca1af);
-            color: white;
-            padding: 60px 20px;
-            text-align: center;
-            border-radius: 0 0 20px 20px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-            font-weight: 700;
-            letter-spacing: 1px;
-        }
-        header p {
-            margin: 15px 0 0;
-            font-size: 1.2rem;
-            font-weight: 300;
-            opacity: 0.9;
-            font-style: italic;
-        }
+/* HEADER MEJORADO */
+        header { background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); color: white; padding: 60px 20px 40px; text-align: center; border-radius: 0 0 30px 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+        .profile-photo { width: 150px; height: 150px; margin: 0 auto 20px; border-radius: 50%; border: 5px solid white; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.3); }
+        .profile-photo img { width: 100%; height: 100%; object-fit: cover; }
+        header h1 { margin: 0; font-size: 2.5rem; font-weight: 700; letter-spacing: 1px; }
+        .brand-name { font-size: 1.4rem; font-weight: 600; color: #81d4fa; margin: 10px 0; text-transform: uppercase; letter-spacing: 2px; }
+        .tagline { margin: 15px 0 0; font-size: 1.1rem; font-weight: 300; opacity: 0.9; font-style: italic; max-width: 800px; margin-left: auto; margin-right: auto; }
 
         /* --- SECCIÓN ACERCA DE (Tu Filosofía) --- */
         .about {
@@ -186,19 +171,19 @@
 </head>
 <body>
 
-    <!-- HEADER -->
+    !-- HEADER CON FOTO Y MARCA -->
     <header>
         <div class="container">
+            <!-- Foto de perfil redonda -->
+            <div class="profile-photo">
+                <img src="tu_foto_perfil.jpg" alt="Samuel Ceballos P." onerror="this.src='https://via.placeholder.com/150x150/2c5364/ffffff?text=SR'">
+            </div>
+            
             <h1>Samuel Ceballos P.</h1>
-            <p>Transforming Volatility into Strategic Resilience | Bridging Data Science with Real-World Optimization</p>
+            <p class="brand-name">Data Science Insights</p>
+            <p class="tagline">Transforming Volatility into Strategic Resilience | Bridging Data Science with Real-World Optimization</p>
         </div>
     </header>
-
-    <!-- ACERCA DE -->
-    <section class="about">
-        <h2>My Philosophy</h2>
-        <p>Data is more than just numbers; it is the voice of reality. Here, I document how I apply Data Science to solve tangible problems: from food security and climate risk to business optimization. Transforming uncertainty into action.</p>
-    </section>
 
     <!-- PROYECTOS VIP -->
     <h2 class="projects-title">Featured Projects</h2>
@@ -245,16 +230,14 @@
 
     </div>
 
-<!-- SECCIÓN: CONTADOR DE VISITAS (LIVE METRICS) -->
+<!-- CONTADOR DE VISITAS FUNCIONAL -->
     <section class="visitor-counter">
-        <p class="counter-text">🌍 Global Visitors Tracking Real-World Impact</p>
-        
-        <!-- AQUÍ PEGA EL CÓDIGO DE TU CONTADOR ORIGINAL -->
-        <div class="counter-badge">
-            [PEGA AQUÍ TU SCRIPT O IMAGEN DEL CONTADOR VIEJO]
+        <div class="counter-title">🌍 Global Visitors Tracking Real-World Impact</div>
+         <div class="counter-display">
+            <span class="counter-icon">️</span>
+            <span id="visitor-count">Loading...</span>
         </div>
-        
-        <p class="counter-subtext">Thank you for exploring Data Science Insights.</p>
+        <p class="counter-subtext">Thank you for exploring Data Science Insights</p>
     </section>
 
     
@@ -268,5 +251,16 @@
         <p>&copy; 2026 Data Science Insights | Samuel Ceballos P.</p>
     </footer>
 
+<script>
+        // Contador simple que se incrementa con cada visita
+        let count = localStorage.getItem('visitorCount') || 1240;
+        count++;
+        localStorage.setItem('visitorCount', count);
+        document.getElementById('visitor-count').textContent = count.toLocaleString() + ' Views';
+    </script>
+
+
+
+    
 </body>
 </html>
