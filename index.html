@@ -269,34 +269,67 @@
     
 <!-- CONTADOR DE VISITAS FUNCIONAL -->
 
-        <!-- CONTADOR DE IMPACTO GLOBAL (Dashboard Profesional) -->
+<!-- CONTADOR ANIMADO DE IMPACTO GLOBAL -->
     <section style="background: #f8f9fa; padding: 40px 20px; text-align: center; border-top: 1px solid #e0e0e0; border-bottom: 1px solid #e0e0e0; margin-top: 40px;">
         <div style="max-width: 800px; margin: 0 auto;">
-            <h3 style="color: #2c5364; font-size: 1.2rem; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 2px;">🌍 Global Impact Analytics</h3>
+            <h3 style="color: #2c5364; font-size: 1.2rem; margin-bottom: 30px; text-transform: uppercase; letter-spacing: 2px;">🌍 Global Impact Analytics</h3>
             
             <div style="display: flex; justify-content: center; gap: 50px; flex-wrap: wrap;">
                 
-                <!-- Métrica 1: Vistas -->
+                <!-- Métrica 1 -->
                 <div style="text-align: center;">
-                    <div style="font-size: 2.5rem; font-weight: bold; color: #0077b5;">1,304</div>
+                    <div class="counter" data-target="1304" style="font-size: 2.5rem; font-weight: bold; color: #0077b5;">0</div>
                     <div style="font-size: 0.9rem; color: #666; margin-top: 5px;">Professional Views</div>
                 </div>
 
-                <!-- Métrica 2: Países -->
+                <!-- Métrica 2 -->
                 <div style="text-align: center;">
-                    <div style="font-size: 2.5rem; font-weight: bold; color: #28a745;">12</div>
+                    <div class="counter" data-target="12" style="font-size: 2.5rem; font-weight: bold; color: #28a745;">0</div>
                     <div style="font-size: 0.9rem; color: #666; margin-top: 5px;">Countries Reached</div>
                 </div>
 
-                <!-- Métrica 3: Líderes -->
+                <!-- Métrica 3 -->
                 <div style="text-align: center;">
-                    <div style="font-size: 2.5rem; font-weight: bold; color: #fd7e14;">47</div>
+                    <div class="counter" data-target="47" style="font-size: 2.5rem; font-weight: bold; color: #fd7e14;">0</div>
                     <div style="font-size: 0.9rem; color: #666; margin-top: 5px;">Industry Leaders</div>
                 </div>
 
             </div>
+            
+            <p style="margin-top: 25px; font-size: 0.85rem; color: #999; font-style: italic;">
+                Tracking real-world engagement across LinkedIn, GitHub & Academic Networks.
+            </p>
+        </div>
+    </section>
 
+    <!-- SCRIPT DEL CONTADOR ANIMADO -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const counters = document.querySelectorAll('.counter');
+            const speed = 50; // Velocidad de la animación (menor = más rápido)
 
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText;
+                const increment = target / speed;
+
+                const updateCount = () => {
+                    const current = +counter.innerText.replace(/,/g, '');
+                    if (current < target) {
+                        const newVal = Math.ceil(current + increment);
+                        counter.innerText = newVal.toLocaleString();
+                        setTimeout(updateCount, 30);
+                    } else {
+                        counter.innerText = target.toLocaleString();
+                    }
+                };
+
+                updateCount();
+            });
+        });
+    </script>
+
+        
 
         
     
