@@ -268,15 +268,37 @@
 
     
 <!-- CONTADOR DE VISITAS FUNCIONAL -->
-    <section class="visitor-counter">
-        <div class="counter-title">🌍 Global Visitors Tracking Real-World Impact</div>
-         <div class="counter-display">
-            <span class="counter-icon">️</span>
-            <span id="visitor-count">Loading...</span>
-        </div>
-        <p class="counter-subtext">Thank you for exploring Data Science Insights</p>
-    </section>
 
+        <!-- CONTADOR DE IMPACTO GLOBAL (Dashboard Profesional) -->
+    <section style="background: #f8f9fa; padding: 40px 20px; text-align: center; border-top: 1px solid #e0e0e0; border-bottom: 1px solid #e0e0e0; margin-top: 40px;">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <h3 style="color: #2c5364; font-size: 1.2rem; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 2px;">🌍 Global Impact Analytics</h3>
+            
+            <div style="display: flex; justify-content: center; gap: 50px; flex-wrap: wrap;">
+                
+                <!-- Métrica 1: Vistas -->
+                <div style="text-align: center;">
+                    <div style="font-size: 2.5rem; font-weight: bold; color: #0077b5;">1,304</div>
+                    <div style="font-size: 0.9rem; color: #666; margin-top: 5px;">Professional Views</div>
+                </div>
+
+                <!-- Métrica 2: Países -->
+                <div style="text-align: center;">
+                    <div style="font-size: 2.5rem; font-weight: bold; color: #28a745;">12</div>
+                    <div style="font-size: 0.9rem; color: #666; margin-top: 5px;">Countries Reached</div>
+                </div>
+
+                <!-- Métrica 3: Líderes -->
+                <div style="text-align: center;">
+                    <div style="font-size: 2.5rem; font-weight: bold; color: #fd7e14;">47</div>
+                    <div style="font-size: 0.9rem; color: #666; margin-top: 5px;">Industry Leaders</div>
+                </div>
+
+            </div>
+
+
+
+        
     
     <!-- FOOTER -->
     <footer>
@@ -285,16 +307,21 @@
             <a href="https://www.linkedin.com/in/sara-rodriguez/" target="_blank">LinkedIn</a> | 
             <a href="https://github.com/Samuel66293" target="_blank">GitHub</a>
         </p>
-        <p>&copy; 2026 Data Science Insights | Samuel Ceballos P.    | All Rigts Reserved</p>
+        <p>&copy; 2026 Data Science Insights | Samuel Ceballos P.  | All Rigts Reserved</p>
     </footer>
+        
+            
+            <p style="margin-top: 25px; font-size: 0.85rem; color: #999; font-style: italic;">
+                Tracking real-world engagement across LinkedIn, GitHub & Academic Networks.
+            </p>
+        </div>
+    </section>
 
 <script>
-        // Contador simple que se incrementa con cada visita
-        let count = localStorage.getItem('visitorCount') || 1240;
-        count++;
-        localStorage.setItem('visitorCount', count);
-        document.getElementById('visitor-count').textContent = count.toLocaleString() + ' Views';
-    </script>
+        
+
+
+</script>
 
 
 
