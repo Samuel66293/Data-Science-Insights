@@ -303,35 +303,31 @@
     </section>
 
     <!-- SCRIPT DEL CONTADOR ANIMADO -->
+    
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const counters = document.querySelectorAll('.counter');
-            const speed = 50; // Velocidad de la animación (menor = más rápido)
-
+            
             counters.forEach(counter => {
-                const target = +counter.getAttribute('data-target');
-                const count = +counter.innerText;
-                const increment = target / speed;
+                const target = parseInt(counter.getAttribute('data-target'));
+                let current = 0;
+                const duration = 2000; // 2 segundos de animación
+                const steps = 60; // 60 frames
+                const increment = target / steps;
+                const stepTime = duration / steps;
 
-                const updateCount = () => {
-                    const current = +counter.innerText.replace(/,/g, '');
-                    if (current < target) {
-                        const newVal = Math.ceil(current + increment);
-                        counter.innerText = newVal.toLocaleString();
-                        setTimeout(updateCount, 30);
-                    } else {
-                        counter.innerText = target.toLocaleString();
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        current = target;
+                        clearInterval(timer);
                     }
-                };
-
-                updateCount();
+                    counter.innerText = Math.floor(current).toLocaleString();
+                }, stepTime);
             });
         });
     </script>
 
-        
-
-        
     
     <!-- FOOTER -->
     <footer>
