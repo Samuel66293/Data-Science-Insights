@@ -302,21 +302,22 @@
         </div>
     </section>
 
-    <!-- SCRIPT DEL CONTADOR ANIMADO -->
-    
+<!-- MOTOR DEL CONTADOR (Versión Simplificada) -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const counters = document.querySelectorAll('.counter');
+    window.onload = function() {
+        var counters = document.querySelectorAll('.counter');
+        
+        for (var i = 0; i < counters.length; i++) {
+            var counter = counters[i];
+            var target = parseInt(counter.getAttribute('data-target'));
+            var current = 0;
+            var duration = 2000;
+            var steps = 60;
+            var increment = target / steps;
+            var stepTime = duration / steps;
             
-            counters.forEach(counter => {
-                const target = parseInt(counter.getAttribute('data-target'));
-                let current = 0;
-                const duration = 2000; // 2 segundos de animación
-                const steps = 60; // 60 frames
-                const increment = target / steps;
-                const stepTime = duration / steps;
-
-                const timer = setInterval(() => {
+            (function(counter, target, increment, stepTime) {
+                var timer = setInterval(function() {
                     current += increment;
                     if (current >= target) {
                         current = target;
@@ -324,8 +325,9 @@
                     }
                     counter.innerText = Math.floor(current).toLocaleString();
                 }, stepTime);
-            });
-        });
+            })(counter, target, increment, stepTime);
+        }
+    };
     </script>
 
     
